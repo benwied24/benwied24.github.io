@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+
+
+<style type="text/css">
+
+body{
+	background-color:black;
+	}
+
+	#doll{
+		width:1000px;
+		height:800px;
+		background-image:url(https://m.media-amazon.com/images/I/61Q2myvN2RL._AC_UF894,1000_QL80_.jpg);
+		background-size:contain;
+		background-position:center;
+		border-radius:50%;
+		background-repeat: no-repeat;
+		opacity:0;
+		animation-delay:3s;
+		animation-iteration-count: 1;
+		animation-name:turn;
+		animation-duration:5s;
+}
+
+@keyframes turn{
+
+	0%{
+	transform:rotate(0deg);
+	}
+
+
+	100%{
+	transform:rotate(60deg);
+	}
+	}
+</style>
+
+
+</head>
+
+
+<body>
+
+	<audio id="scare" src="scare.mp3"></audio>
+
+	<center><div id="doll"></div></center>
+
+	<script type="text/javascript">
+		document.addEventListener("click", function(){
+		doll.style.opacity = "1"
+		scare.play()
+
+	})
+	</script>
+
+</body>
+</html>
