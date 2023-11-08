@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	</style>
+</head>
+<body>
+
+<!-- div id= "cinnabun"></div>
+-->
+
+	<script type="text/javascript">
+		function makeCinnabun () {
+		var cinnabun = document.createElement("div")
+		document.body.appendChild(cinnabun);
+		cinnabun.style.width = "200px"
+		cinnabun.style.height = "200px"
+		cinnabun.style.backgroundImage = "url(https://www.cobsbread.com/us/wp-content//uploads/2023/04/PB-Cinnamon-Bun-saved-for-web-min.png)";
+		cinnabun.style.backgroundSize = "contain"
+		cinnabun.style.backgroundRepeat = "no-repeat"
+		cinnabun.style.display = "inline-block"
+
+
+		cinnabun.addEventListener("mouseover", function(){
+			cinnabun.style.opacity="0"
+		})
+
+
+
+	}
+	
+	makeCinnabun()
+	setInterval(makeCinnabun, 125)
+
+	</script>
+</body>
+</html>
