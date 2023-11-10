@@ -4,14 +4,29 @@
 	<title></title>
 
 	<style type="text/css">
+		#mouth{
+			width:100px;
+			height:100px;
+			background-image:url(mouth.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+			position:absolute;
+			/*left:100px;/
+			/*top:100px;*/
+			/*z-index:-10px;*/
+
+		transition:.5s;
+		}
 	</style>
 </head>
 <body>
 
-<!-- div id= "cinnabun"></div>
--->
+ <div id= "mouth"></div>
+
 
 	<script type="text/javascript">
+
+
 		function makeCinnabun () {
 		var cinnabun = document.createElement("div")
 		document.body.appendChild(cinnabun);
@@ -23,13 +38,21 @@
 		cinnabun.style.display = "inline-block"
 
 
-		cinnabun.addEventListener("mouseover", function(){
+		cinnabun.addEventListener("mouseenter", function(){
+
 			cinnabun.style.opacity="0"
 		})
 
 
 
-	}
+	} //end of function//
+
+	document.addEventListener("mousemove", function(event){
+		console.log(event.clientX, event.clientY)
+		mouth.style.left = event.clientX-50 +'px';
+		mouth.style.top = event.clientY-35 +'px';
+
+	})
 	
 	makeCinnabun()
 	setInterval(makeCinnabun, 125)
