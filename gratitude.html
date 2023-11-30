@@ -11,54 +11,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<style type="text/css">
+	body{
+			margin:0px;
+			background-color:lightblue;
+		}
+
 	#one{
-		width:100px;
-		height:100px;
-		background-image:url(saj.HEIC);
+		opacity:0;
+		width:200px;
+		height:200px;
+		background-image:url(saj.jpg);
 		background-size:contain;
 		background-repeat:no-repeat;
-		position:absolute;
+		position:relative;
 	}
 	#two{
-		width:100px;
-		height:100px;
-		background-image:url(jon.HEIC);
+		opacity:0;
+		left:500px;
+		top:200px;
+		width:200px;
+		height:200px;
+		background-image:url(jon.jpg);
 		background-size:contain;
 		background-repeat:no-repeat;
-		position:absolute;
+		position:relative;
 	}
 	#three{
-		width:100px;
-		height:100px;
+		opacity:0;
+		left:100px;
+		top:100px;
+		width:200px;
+		height:200px;
 		background-image:url(hewwy.jpeg);
 		background-size:contain;
 		background-repeat:no-repeat;
-		position:absolute;
+		position:relative;
 	}
 	#four{
-		width:100px;
-		height:100px;
+		opacity:0;
+		left:1000px;
+		top:-400px;
+		width:200px;
+		height:200px;
 		background-image:url(jack.PNG);
 		background-size:contain;
 		background-repeat:no-repeat;
-		position:absolute;
+		position:relative;
 	}
-	#five{
-		width:100px;
-		height:100px;
-		background-image:url(___);
-		background-size:contain;
-		background-repeat:no-repeat;
-		position:absolute;
-	}
-	#six{
-		width:100px;
-		height:100px;
-		background-image:url(___);
-		background-size:contain;
-		background-repeat:no-repeat;
-		position:absolute;
-	}
+	
 	</style>
 </head>
 <body>
@@ -66,15 +66,29 @@
 	<div id = "two"></div>
 	<div id = "three"></div>
 	<div id = "four"></div>
-	<div id = "five"></div>
-	<div id = "six"></div>
 
 
 	<script type="text/javascript">
+		var x = 0
 		document.addEventListener("click", function(){
 			x=x+1
 			console.log(x)
-		pic.style.backgroundImage = "url("+x+".jpg)"
+
+			if (x ==1){
+			one.style.opacity = "1"
+			}
+			if (x ==2){
+			two.style.opacity = "1"
+			}
+			if (x ==3){
+			three.style.opacity = "1"
+			}
+			if (x ==4){
+			four.style.opacity = "1"
+			}
+
+		// pic.style.backgroundImage = "url("+x+".jpg)"
+
 		})
 	</script>
 
