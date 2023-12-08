@@ -24,14 +24,22 @@
 		}
 		#spalding{
 			
-			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT671pysO3b0FzShzPLZGHz56j03iQ7VYgVpA&usqp=CAU);
+			background-image:url(spalding.png);
 		}
 		#wilson{
-			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfYnSoTpfSkDmrEdGmsAkf0i70HApzkB4_pg&usqp=CAU);
+			background-image:url(wilson.png);
 		}
 		#colorful{
 			
-			background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2n22k9hK3KNU-9GegwBGpkyR5xNg5Hbt39A&usqp=CAU);
+			background-image:url(colorful.png);
+		}
+
+		#testDiv{
+			width:100px;
+			height:100px;
+			border:1px solid black;
+			background-repeat:no-repeat;
+			background-size:contain;
 		}
 	</style>	
 
@@ -41,20 +49,35 @@
 	<div id="spalding" class="dots"></div>
 	<div id="wilson" class="dots"></div>
 	<div id="colorful" class="dots"></div>
+	<div id="testDiv"></div>
 	<div id = "kobe"></div>
 
 	<script id = "javascript">
 
 		var basketballs;
 
+		basketball.addEventListener("click", function makeBasketballs (event)){
+			var basketballs = document.createElement("div");
+			document.appendChild(basketballs);
+		}
+
+        
+
 		spalding.addEventListener("click", function(){
-			console.log("spalding")
+			basketballs = "spalding.png"
+			console.log(basketballs)
+			testDiv.style.backgroundImage = "url(" + basketballs + ")"
 			})
 		wilson.addEventListener("click", function(){
-			console.log("wilson")
+			basketballs = "wilson.png"
+			console.log(basketballs)
+			testDiv.style.backgroundImage = "url(" + basketballs + ")"
+
 			})
 		colorful.addEventListener("click", function(){
-			console.log("colorful")
+			basketballs = "colorful.png"
+			console.log(basketballs)
+			testDiv.style.backgroundImage = "url(" + basketballs + ")"
 			})
 		
 	</script>
