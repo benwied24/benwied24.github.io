@@ -34,13 +34,7 @@
 			background-image:url(colorful.png);
 		}
 
-		#testDiv{
-			width:100px;
-			height:100px;
-			border:1px solid black;
-			background-repeat:no-repeat;
-			background-size:contain;
-		}
+		
 	</style>	
 
 		
@@ -49,36 +43,56 @@
 	<div id="spalding" class="dots"></div>
 	<div id="wilson" class="dots"></div>
 	<div id="colorful" class="dots"></div>
-	<div id="testDiv"></div>
 	<div id = "kobe"></div>
 
 	<script id = "javascript">
 
 		var basketballs;
-
-		basketball.addEventListener("click", function makeBasketballs (event)){
-			var basketballs = document.createElement("div");
-			document.appendChild(basketballs);
-		}
-
-        
-
+		
 		spalding.addEventListener("click", function(){
 			basketballs = "spalding.png"
 			console.log(basketballs)
-			testDiv.style.backgroundImage = "url(" + basketballs + ")"
+			makeBball()
+			
 			})
+
+
 		wilson.addEventListener("click", function(){
 			basketballs = "wilson.png"
 			console.log(basketballs)
-			testDiv.style.backgroundImage = "url(" + basketballs + ")"
+			makeBball()
+
 
 			})
 		colorful.addEventListener("click", function(){
 			basketballs = "colorful.png"
 			console.log(basketballs)
-			testDiv.style.backgroundImage = "url(" + basketballs + ")"
+						makeBball()
+
 			})
+
+
+		kobe.addEventListener("click", function makeBball (event) {
+		var ball = document.createElement("div")
+		document.body.appendChild(ball);
+		ball.style.width = "100px"
+		ball.style.height = "100px"
+		ball.style.backgroundSize = "contain"
+		ball.style.backgroundRepeat = "no-repeat"
+		ball.style.display = "inline-block"
+		ball.style.backgroundImage = "url(" + basketballs + ")"
+		ball.style.position = "absolute"
+		ball.style.left = event.clientX-50 +'px'
+		ball.style.top = event.clientY-50 +'px'
+
+
+		})
+
+		
+
+        
+
+		
 		
 	</script>
 </body>
