@@ -4,25 +4,43 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+
+	<style type="text/css">
+		
+		#whatever{
+			width:100px;
+			height:100px;
+			background-color:red;
+			position:relative;
+/*			left:40%;*/
+			top:200px;
+			text-align:center;
+		}
+	</style>
 </head>
 <body>
+	<center>things to work on this year
 
+
+	<div id="whatever"></div>
+</center>
 	<script type= "text/javascript">
 
 		var goals2024 = [
-			"run more",
-			"read more",
-			"procrastinate less",
-			"watch more movies",
-			
+			"Run more",
+			"Read more",
+			"Procrastinate less",
+			"Watch more movies",
+			"Using a planner more"
 		]
 
 
 
 
 		document.addEventListener("click", function(){
-			var x = Math.round(Math.random()*3);
+			var x = Math.round(Math.random()*4);
 			console.log(goals2024[x])
+			whatever.innerText = goals2024[x]
 		})
 
 	</script>
