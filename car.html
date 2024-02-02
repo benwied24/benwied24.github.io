@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#car{
+			width:100px;
+			height:100px;
+			background-image:url(car.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-size:contain;
+			position:absolute;
+			top:100px;
+		}
+		body{
+			margin:0px;
+			background-image:url(https://external-preview.redd.it/D018_7xBz3vVZXVFWRiNplhVHldvfAVMlrrhU1XlCvQ.jpg?auto=webp&s=3f820471fca1cfa40c1252a114c5dc6838cc52d4);
+		
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="car"></div>
+
+	<script type="text/javascript">
+
+		var x = 0;
+		var y = 0;
+		document.addEventListener("keydown", function(event){
+			console.log(event.key)
+
+			if(event.key=="ArrowRight"){
+				x= x+5
+				
+			}
+			if(event.key=="ArrowLeft"){
+				x= x-5
+				
+			}
+			if(event.key=="ArrowUp"){
+				y= y-5
+				
+			}
+			if(event.key=="ArrowDown"){
+				y= y+5
+			}
+
+			car.style.left = x + "px"
+			car.style.top = y + "px"
+		})
+
+	</script>
+
+</body>
+</html>
