@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			background-color:lightblue;
+		}
+	</style>
+</head>
+
+	Roses are red, violets are blue<br>
+	You are an angel and
+	<input id="word"></input> too.
+	<br>
+
+	<button id=submit>Submit!</button>
+
+	<script type="text/javascript">
+		submit.addEventListener("click", function(){
+			console.log(word.value)
+			alert("You're not " + word.value + ", you're a poopy face!")
+		})
+
+	</script>
+
+
+</body>
+</html>
