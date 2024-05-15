@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<span id="word">song</span>
+
+	<audio id="song1" src="zion.mp3"></audio>
+
+	<script type="text/javascript">
+		var clickcounter = 0;
+
+		word.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song1.pause();}
+			if(clickcounter%2 == 1){song1.play();}
+			
+		})
+
+		
+	</script>
+
+</body>
+</html>

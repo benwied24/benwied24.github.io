@@ -32,23 +32,27 @@
 			font-family: 'Inclusive Sans', cursive;
 			font-size:20px;
 		}
+
 	</style>
+
 
 <h1>
 Poem of 4/5/24 - Daydreaming<br>
 </h1>
 <p>
+<span id="song">(SONG)</span>
 In the midst of some test, some class, and some place, <br>
 I grasp and drift away on daydream's gesticulating wing,<br>
-Weaving me through the (clouds and blue sky) alike,<br>
+Weaving me through the <span id="cloudsbluesky">(clouds and blue sky)</span> alike,<br>
 To the realm of fantasy of which boredom brings about,<br>
 <br>
 Drifting into a world of wonder,<br>
 Where reality and worldly concerns fade away,<br>
-Where fierce (dragons roar), giants slumber, and taverns buzz and hum,<br>
+Where fierce <span id="dragonsroar">(dragons roar)</span>, giants slumber, and taverns <span id="tavernsbuzz">(buzz and hum)</span>
+<br>
 In whispered echoes of fantastical shades.<br>
 <br>
-But, as soon as it began, a bell rings, bringing about a utopia’s conclusion,<br>
+But, as soon as it began, a <span id="bell">(bell rings)</span>, bringing about a utopia’s conclusion,<br>
 Back to what’s real, where daydreams must suspend.<br>
 From a world where fantasy lingers free, to a beckoning and harsh reality,<br>
 In which I, head down, dejectedly hand in an incomplete test.<br>
@@ -61,12 +65,12 @@ Poem of 4/8/24 - Winter's Warm Embrace<br>
 <p>
 Clutched in winter’s icy grip, I lie still,<br> 
 Held dearly in a frosty chill to innovate,<br>
-Harsh, (biting winds) whisper tales of snow,<br>
+Harsh, <span id="wind">(biting winds)</span> whisper tales of snow,<br>
 As I integrate into the frostbitten landscape.<br><br>
 
 Beneath the gray sky I lie among the white,<br>
 Peacefully freezezing in a blanket of sharp crystals,<br>
-Penetrating my body at every joint and flap of flesh prompts,<br>
+Penetrating my body at every joint and flap of flesh prompts<br>
 An icy cold to seep into each and every bone,<br><br>
 
 My head spins, and yet the world remains frozen still,<br>
@@ -77,7 +81,7 @@ Journeying back home, to the Cabin once known,<br><br>
 As my thought of winter's <span id="freeze">(freeze)</span> becomes a distant one,<br>
 As the hearth comforts me in its conforming embrace,<br>
 As I nestle and settle in the arms of the night,<br>
-I am comforted with a steaming cup of cocoa, a wool blanket, and a flickering TV.<br>
+I am comforted with a steaming cup of cocoa, a wool blanket, and a flickering <span id="tv">(TV)</span>.<br>
 <br><br>
 </p>
 
@@ -228,13 +232,83 @@ I find that peace that nothing else can hope to supply.<br>
 <br><br>
 </p>
 
+	<audio id="song1" src="zion.mp3"></audio>
+	<audio id="song2" src="dragon.mp3"></audio>
+	<audio id="song3" src="tavernsbuzz.mp3"></audio>
+	<audio id="song4" src="wind.mp3"></audio>
+	<audio id="song5" src="bell.mp3"></audio>
+	<audio id="song6" src="tv.mp3"></audio>
+
+
 <script type="text/javascript">
 	
-	freeze.addEventListener("click", function(){
-		document.body.style.backgroundColor="lightblue"
+	cloudsbluesky.addEventListener("click", function(){
+		document.body.style.backgroundColor="skyblue"
 		document.body.style.transition="2s"
 
 	})
+
+	freeze.addEventListener("click", function(){
+		document.body.style.backgroundColor="lightblue"
+		document.body.style.transition="2s"
+	})
+	
+
+	var clickcounter = 0;
+
+	song.addEventListener("click", function(){
+		clickcounter = clickcounter +1
+
+		if(clickcounter%2 == 0){song1.pause();}
+		if(clickcounter%2 == 1){song1.play();}
+	})
+
+	var clickcounter = 0;
+
+		dragonsroar.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song2.pause();}
+			if(clickcounter%2 == 1){song2.play();}
+	})
+
+	var clickcounter = 0;
+
+		tavernsbuzz.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song3.pause();}
+			if(clickcounter%2 == 1){song3.play();}
+			
+	})
+	var clickcounter = 0;
+
+		wind.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song4.pause();}
+			if(clickcounter%2 == 1){song4.play();}
+			
+	})
+	var clickcounter = 0;
+
+		bell.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song5.pause();}
+			if(clickcounter%2 == 1){song5.play();}
+	})
+
+	var clickcounter = 0;
+
+		tv.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song6.pause();}
+			if(clickcounter%2 == 1){song6.play();}
+	})
+
+		
 </script>
 </body>
 </html>
