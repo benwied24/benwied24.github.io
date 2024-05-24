@@ -10,9 +10,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-</head>
-<body>
+
+
 	<style type="text/css">
+
+		#tree{
+			width:100%;
+			height:100px;
+		}
 		p{
 
 			font-family: 'Roboto Condensed', sans-serif;
@@ -35,14 +40,16 @@
 
 	</style>
 
+<body>
 
+	<!-- <div id="tree"> -->
 <h1>
 Poem of 4/5/24 - Daydreaming<br>
 </h1>
 <p>
 <span id="song">(SONG)</span>
 In the midst of some test, some class, and some place, <br>
-I grasp and drift away on daydream's gesticulating wing,<br>
+I grasp and drift away on daydream's geszticulating wing,<br>
 Weaving me through the <span id="cloudsbluesky">(clouds and blue sky)</span> alike,<br>
 To the realm of fantasy of which boredom brings about,<br>
 <br>
@@ -59,6 +66,8 @@ In which I, head down, dejectedly hand in an incomplete test.<br>
 <br><br>
 </p>
 
+<!-- </div> -->
+
 <h1>
 Poem of 4/8/24 - Winter's Warm Embrace<br>
 </h1>
@@ -73,12 +82,12 @@ Peacefully freezezing in a blanket of sharp crystals,<br>
 Penetrating my body at every joint and flap of flesh prompts<br>
 An icy cold to seep into each and every bone,<br><br>
 
-My head spins, and yet the world remains frozen still,<br>
+My head spins, and yet the <span id="world">(world remains frozen still)</span><br>
 I rise up, up from my slumbering comfort at death’s doorstep,<br>
-I weave methodically with the (north wind) through the snow-capped trees,<br>
-Journeying back home, to the Cabin once known,<br><br>
+I weave methodically with the north wind through the snow-capped trees,<br>
+Journeying back home, to the <span id="cabin">(Cabin)</span> once known,<br><br>
 
-As my thought of winter's <span id="freeze">(freeze)</span> becomes a distant one,<br>
+As my thought of winter's freeze becomes a distant one,<br>
 As the hearth comforts me in its conforming embrace,<br>
 As I nestle and settle in the arms of the night,<br>
 I am comforted with a steaming cup of cocoa, a wool blanket, and a flickering <span id="tv">(TV)</span>.<br>
@@ -89,19 +98,19 @@ I am comforted with a steaming cup of cocoa, a wool blanket, and a flickering <s
 Poem of 4/11/24 - Whispers of Fall<br>
 </h1>
 <p>
-sheltered under summer’s (warm embrace),<br>
-sprawled across the hammock like a starfish, eyes closed,<br>
+sheltered under summer’s warm embrace,<br>
+(sprawled across the hammock) like a starfish, eyes closed,<br>
 intaking summer’s graceful, sun-kissed, mellow squeeze,<br>
 a season dancing wild and free.<br><br>
 
 and yet, as slowly as it began, nature’s canvas is painted over with hues of fall,<br>
-from summer's (spirited greens) to (fiery reds and golds),<br>
+from summer's <span id="green">(spirited greens)</span> to <span id="red">(fiery reds)</span>,<br>
 a canvas entralled in a colorful sprawl,<br>
 a symphony of an ever changing colors to behold.<br><br>
 
 and yet, throughout it all, a tinge of bittersweet,<br>
 as those dear summer days slip from my grasp, onto their swift retreat,<br>
-for in the distance looms a bell’s haunting (ring),<br>
+for in the distance looms a bell's haunting <span id="ring">(ring)</span>,<br>
 as a summoning to those abhorred dark and cold school halls again.
 <br><br><br>
 </p>
@@ -247,12 +256,28 @@ I find that peace that nothing else can hope to supply.<br>
 		document.body.style.transition="2s"
 
 	})
-
-	freeze.addEventListener("click", function(){
-		document.body.style.backgroundColor="lightblue"
+	red.addEventListener("click", function(){
+		document.body.style.backgroundColor="red"
 		document.body.style.transition="2s"
 	})
-	
+	green.addEventListener("click", function(){
+		document.body.style.backgroundColor="green"
+		document.body.style.transition="2s"
+	})
+	world.addEventListener("click", function(){
+		document.body.style.backgroundImage="url(https://t3.ftcdn.net/jpg/05/58/18/64/360_F_558186492_Xcb2lV5I1G7zyNY47UoaL3bquPK0V1B9.jpg)"
+		document.body.style.transition="1s"
+		document.body.style.backgroundRepeat = "no-repeat";
+		document.body.style.backgroundSize = "contain";
+	})
+	cabin.addEventListener("click", function(){
+		document.body.style.backgroundImage="url(https://t3.ftcdn.net/jpg/05/40/25/36/360_F_540253665_swKr9vGXaCcyDzW89ECthCW3VloxxMrf.jpg)"
+		document.body.style.backgroundRepeat = "no-repeat";
+		document.body.style.backgroundSize = "contain";
+
+		
+
+	})
 
 	var clickcounter = 0;
 
@@ -308,7 +333,15 @@ I find that peace that nothing else can hope to supply.<br>
 			if(clickcounter%2 == 1){song6.play();}
 	})
 
-		
+	var clickcounter = 0;
+
+		ring.addEventListener("click", function(){
+			clickcounter = clickcounter +1
+
+			if(clickcounter%2 == 0){song5.pause();}
+			if(clickcounter%2 == 1){song5.play();}
+	})
+	
 </script>
 </body>
 </html>
